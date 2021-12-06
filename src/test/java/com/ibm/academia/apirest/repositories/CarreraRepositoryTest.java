@@ -15,8 +15,7 @@ import com.ibm.academia.apirest.datos.DatosDummy;
 import com.ibm.academia.apirest.entities.Carrera;
 
 @DataJpaTest
-public class CarreraRepositoryTest 
-{
+public class CarreraRepositoryTest {
 	@Autowired
 	private CarreraRepository carreraRepository;
 	
@@ -38,8 +37,7 @@ public class CarreraRepositoryTest
 	
 	@Test
 	@DisplayName("Test: Busca carreras por nombre")
-	void findCarrerasByNombreContains()
-	{
+	void findCarrerasByNombreContains() {
 		//Given
 		/*carreraRepository.save(DatosDummy.carrera01());
 		carreraRepository.save(DatosDummy.carrera02());
@@ -54,8 +52,7 @@ public class CarreraRepositoryTest
 
 	@Test
 	@DisplayName("Test: Buscar carreras por nombre No case sensitive")
-	void findCarrerasByNombreContainsIgnoreCase()
-	{
+	void findCarrerasByNombreContainsIgnoreCase() {
 		//Given
 		/*carreraRepository.save(DatosDummy.carrera01());
 		carreraRepository.save(DatosDummy.carrera02());
@@ -70,8 +67,7 @@ public class CarreraRepositoryTest
 
 	@Test
 	@DisplayName("Test: Buscar carreras mayores a N años")
-	void findCarrerasByCantidadAniosAfter()
-	{
+	void findCarrerasByCantidadAniosAfter() {
 		//Given
 		/*carreraRepository.save(DatosDummy.carrera01());
 		carreraRepository.save(DatosDummy.carrera02());

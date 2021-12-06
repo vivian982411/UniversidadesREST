@@ -5,14 +5,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-class UniversidadesRestApplicationTests 
-{
+class UniversidadesRestApplicationTests {
 	Calculadora calculadora = new Calculadora();
 	
 	@Test
 	@DisplayName("Test: Suma de valores")
-	void sumarValores() 
-	{
+	void sumarValores() {
 		//Given --> Define el contexto o las precondiciones.
 		Integer valorA = 2;
 		Integer valorB = 3;
@@ -25,8 +23,7 @@ class UniversidadesRestApplicationTests
 		assertThat(expected).isEqualTo(resultadoEsperado);
 	}
 	
-	class Calculadora
-	{
+	class Calculadora {
 		Integer sumar(Integer a, Integer b)
 		{
 			return a + b;

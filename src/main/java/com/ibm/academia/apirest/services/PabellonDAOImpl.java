@@ -6,6 +6,7 @@ import com.ibm.academia.apirest.repositories.CarreraRepository;
 import com.ibm.academia.apirest.repositories.PabellonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class PabellonDAOImpl extends GenericoDAOImpl<Pabellon, PabellonRepository> implements PabellonDAO {
@@ -16,11 +17,13 @@ public class PabellonDAOImpl extends GenericoDAOImpl<Pabellon, PabellonRepositor
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Iterable<Pabellon> findByDireccionLocalidad(String localidad) {
         return repository.findByDireccionLocalidad(localidad);
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Iterable<Pabellon> findByNombre(String nombre) {
         return repository.findByNombre(nombre);
     }

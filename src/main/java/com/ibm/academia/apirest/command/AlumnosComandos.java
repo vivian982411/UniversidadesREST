@@ -27,8 +27,7 @@ public class AlumnosComandos implements CommandLineRunner {
     private AlumnoDAO alumnoDao;
 
     @Override
-    public void run(String... args) throws Exception
-    {
+    public void run(String... args) throws Exception {
     	/*Optional<Carrera> ingSistemas = carreraDao.buscarPorId(1);
         System.out.println(ingSistemas);
 

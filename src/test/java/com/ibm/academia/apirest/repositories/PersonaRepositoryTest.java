@@ -18,8 +18,7 @@ import com.ibm.academia.apirest.entities.Persona;
 import com.ibm.academia.apirest.entities.Profesor;
 
 @DataJpaTest
-public class PersonaRepositoryTest 
-{
+public class PersonaRepositoryTest {
 	@Autowired
 	@Qualifier("repositorioAlumnos")
 	private PersonaRepository alumnoRepository;
@@ -35,8 +34,7 @@ public class PersonaRepositoryTest
 	
 	@Test
 	@DisplayName("Test: Buscar por Nombre y Apellido")
-	void buscarPorNombreYApellido()
-	{
+	void buscarPorNombreYApellido() {
 		//Given
 		Persona personaEmpleado = empleadoRepository.save(DatosDummy.empleado01());
 		
@@ -51,8 +49,7 @@ public class PersonaRepositoryTest
 	
 	@Test
 	@DisplayName("Test: Buscar persona por DNI")
-	void buscarPorDni() 
-	{
+	void buscarPorDni() {
 		//Given
         Persona personaProfesor = profesorRepository.save(DatosDummy.profesor01());
 
@@ -67,8 +64,7 @@ public class PersonaRepositoryTest
 	
 	@Test
 	@DisplayName("Test: Buscar persona por Apellido")
-	void buscarPersonaPorApellido()
-	{
+	void buscarPersonaPorApellido() {
 		//Given
 		List<Persona> listaPersonas = new ArrayList<Persona>();
 		listaPersonas.add(DatosDummy.alumno01());

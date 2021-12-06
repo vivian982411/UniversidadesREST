@@ -1,7 +1,6 @@
 package com.ibm.academia.apirest.enums;
 
-public enum TipoEmpleado 
-{
+public enum TipoEmpleado {
 	ADMINISTRATIVO,
 	MANTENIMIENTO
 }

@@ -31,8 +31,7 @@ import lombok.ToString;
 @Entity
 @Table(name = "pabellones", schema = "universidad")
 //@Table(name = "pabellones")
-public class Pabellon implements Serializable
-{
+public class Pabellon implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -60,8 +59,7 @@ public class Pabellon implements Serializable
 	@JsonIgnore
 	private Set<Aula> aulas;
 	
-	public Pabellon(Integer id, Double metrosCuadrados, String nombre, Direccion direccion) 
-	{
+	public Pabellon(Integer id, Double metrosCuadrados, String nombre, Direccion direccion) {
 		this.id = id;
 		this.metrosCuadrados = metrosCuadrados;
 		this.nombre = nombre;
@@ -75,8 +73,7 @@ public class Pabellon implements Serializable
 	}
 
 	@Override
-	public boolean equals(Object obj) 
-	{
+	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
 		if (obj == null)

@@ -16,22 +16,19 @@ import com.ibm.academia.apirest.datos.DatosDummy;
 import com.ibm.academia.apirest.entities.Carrera;
 import com.ibm.academia.apirest.repositories.CarreraRepository;
 
-class CarreraDAOImplTest 
-{
+class CarreraDAOImplTest {
 	CarreraDAO carreraDAO;
     CarreraRepository carreraRepository;
 
     @BeforeEach
-    void setUp() 
-    {
+    void setUp() {
         carreraRepository = mock(CarreraRepository.class);
         carreraDAO = new CarreraDAOImpl(carreraRepository);
     }
 
     @Test
     @DisplayName("Test: Buscar carrera por Nombre")
-    void findCarrerasByNombreContains() 
-    {
+    void findCarrerasByNombreContains() {
         //Given
         String nombre = "Ingenieria";
         when(carreraRepository.findCarrerasByNombreContains(nombre))
@@ -49,8 +46,7 @@ class CarreraDAOImplTest
 
     @Test
     @DisplayName("Test: Buscar carreras por nombre No case Sensitive")
-    void findCarrerasByNombreContainsIgnoreCase() 
-    {
+    void findCarrerasByNombreContainsIgnoreCase() {
         //Given
         String nombre = "ingenieria";
         when(carreraRepository.findCarrerasByNombreContainsIgnoreCase(nombre))
@@ -68,8 +64,7 @@ class CarreraDAOImplTest
 
     @Test
     @DisplayName("Test: Buscar Carreras despues de N años")
-    void findCarrerasByCantidadAniosAfter() 
-    {
+    void findCarrerasByCantidadAniosAfter() {
         //Given
         Integer cantidad = 4;
         when(carreraRepository.findCarrerasByCantidadAniosAfter(cantidad))

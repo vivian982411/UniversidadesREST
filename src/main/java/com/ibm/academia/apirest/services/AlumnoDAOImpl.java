@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.ibm.academia.apirest.entities.Persona;
 import com.ibm.academia.apirest.repositories.AlumnoRepository;
 import com.ibm.academia.apirest.repositories.PersonaRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class AlumnoDAOImpl extends PersonaDAOImpl implements AlumnoDAO {
@@ -17,6 +18,7 @@ public class AlumnoDAOImpl extends PersonaDAOImpl implements AlumnoDAO {
 	}
 
 	@Override
+	@Transactional(readOnly = true)
 	public Iterable<Persona> buscarAlumnoPorNombreCarrera(String nombre) {
 		return ((AlumnoRepository)repository).buscarAlumnoPorNombreCarrera(nombre);
 	}

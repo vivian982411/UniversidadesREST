@@ -5,8 +5,7 @@ import java.util.Optional;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.transaction.annotation.Transactional;
 
-public class GenericoDAOImpl <E, R extends CrudRepository<E, Integer>> implements GenericoDAO<E>
-{
+public class GenericoDAOImpl <E, R extends CrudRepository<E, Integer>> implements GenericoDAO<E> {
 	protected final R repository;
 	
 	public GenericoDAOImpl(R repository)

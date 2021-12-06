@@ -25,8 +25,7 @@ import lombok.Setter;
 @Table(name = "profesores", schema = "universidad")
 //@Table(name = "profesores")
 @PrimaryKeyJoinColumn(name = "persona_id")
-public class Profesor extends Persona
-{
+public class Profesor extends Persona {
 	@Column(name = "sueldo")
 	private BigDecimal sueldo;
 	
@@ -40,8 +39,7 @@ public class Profesor extends Persona
 	@JsonIgnore
 	private Set<Carrera> carreras;
 	
-	public Profesor(Integer id, String nombre, String apellido, String dni, Direccion direccion, BigDecimal sueldo) 
-	{
+	public Profesor(Integer id, String nombre, String apellido, String dni, Direccion direccion, BigDecimal sueldo) {
 		super(id, nombre, apellido, dni, direccion);
 		this.sueldo = sueldo;
 	}

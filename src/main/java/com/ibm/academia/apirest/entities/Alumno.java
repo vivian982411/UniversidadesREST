@@ -19,14 +19,12 @@ import lombok.Setter;
 @Table(name = "alumnos", schema = "universidad")
 //@Table(name = "alumnos")
 @PrimaryKeyJoinColumn(name = "persona_id")
-public class Alumno extends Persona
-{
+public class Alumno extends Persona {
 	@ManyToOne(optional = true, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.LAZY)
 	@JoinColumn(name = "carrera_id")
 	private Carrera carrera;
 	
-	public Alumno(Integer id, String nombre, String apellido, String dni, Direccion direccion) 
-	{
+	public Alumno(Integer id, String nombre, String apellido, String dni, Direccion direccion) {
 		super(id, nombre, apellido, dni, direccion);
 	}
 

@@ -24,8 +24,7 @@ public class Comandos implements CommandLineRunner {
     private PabellonDAO pabellonDAO;
 
     @Override
-    public void run(String... args) throws Exception
-    {
+    public void run(String... args) throws Exception {
 		/*Carrera finanzas = new Carrera(null, "Ingenieria en finanzas", 20, 3);
 		Carrera carreraGuardada = carreraDao.guardar(finanzas);
 		System.out.println(carreraGuardada.toString());*/

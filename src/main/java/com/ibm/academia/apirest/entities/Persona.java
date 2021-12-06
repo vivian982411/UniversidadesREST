@@ -31,8 +31,7 @@ import lombok.ToString;
 @Table(name = "personas", schema = "universidad")
 //@Table(name = "personas")
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Persona implements Serializable 
-{
+public abstract class Persona implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -59,8 +58,7 @@ public abstract class Persona implements Serializable
 	})
 	private Direccion direccion;
 	
-	public Persona(Integer id, String nombre, String apellido, String dni, Direccion direccion) 
-	{
+	public Persona(Integer id, String nombre, String apellido, String dni, Direccion direccion) {
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -76,8 +74,7 @@ public abstract class Persona implements Serializable
 	}
 
 	@Override
-	public boolean equals(Object obj) 
-	{
+	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
 		if (obj == null)

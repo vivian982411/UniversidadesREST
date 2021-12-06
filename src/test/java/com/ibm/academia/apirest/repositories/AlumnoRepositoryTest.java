@@ -17,8 +17,7 @@ import com.ibm.academia.apirest.entities.Carrera;
 import com.ibm.academia.apirest.entities.Persona;
 
 @DataJpaTest
-public class AlumnoRepositoryTest 
-{
+public class AlumnoRepositoryTest {
 	@Autowired
 	@Qualifier("repositorioAlumnos")
 	private PersonaRepository alumnoRepository;
@@ -28,8 +27,7 @@ public class AlumnoRepositoryTest
 	
 	@Test
 	@DisplayName("Test: Buscar alumnos por nombre carrera")
-	void buscarAlumnoPorNombreCarrera()
-	{
+	void buscarAlumnoPorNombreCarrera() {
 		//Given
 		Iterable<Persona> personas = alumnoRepository.saveAll(
                 Arrays.asList(
@@ -52,8 +50,7 @@ public class AlumnoRepositoryTest
 	
 	@Test
 	@DisplayName("Test: Buscar alumnos por nombre carrera sin valores")
-    void buscarAlumnosPorNombreCarreraSinValores() 
-	{
+    void buscarAlumnosPorNombreCarreraSinValores() {
         //Given
         Iterable<Persona> personas = alumnoRepository.saveAll(
                 Arrays.asList(

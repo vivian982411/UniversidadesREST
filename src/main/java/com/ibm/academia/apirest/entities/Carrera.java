@@ -28,8 +28,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "carreras", schema = "universidad")
 //@Table(name = "carreras")
-public class Carrera implements Serializable 
-{
+public class Carrera implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
@@ -57,8 +56,7 @@ public class Carrera implements Serializable
 	@JsonIgnore
 	private Set<Profesor> profesores;
 	
-	public Carrera(Integer id, String nombre, Integer cantidadMaterias, Integer cantidadAnios) 
-	{
+	public Carrera(Integer id, String nombre, Integer cantidadMaterias, Integer cantidadAnios) {
 		this.id = id;
 		this.nombre = nombre;
 		this.cantidadMaterias = cantidadMaterias;
@@ -66,8 +64,7 @@ public class Carrera implements Serializable
 	}
 	
 	@Override
-	public String toString() 
-	{
+	public String toString() {
 		return "Carrera [id=" + id + ", nombre=" + nombre + ", cantidadMaterias=" + cantidadMaterias
 				+ ", cantidadAnios=" + cantidadAnios + ", fechaAlta=" + fechaAlta + ", fechaModificacion="
 				+ fechaModificacion + "]";
@@ -80,8 +77,7 @@ public class Carrera implements Serializable
 	}
 
 	@Override
-	public boolean equals(Object obj) 
-	{
+	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
 		if (obj == null)
