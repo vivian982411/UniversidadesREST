@@ -1,7 +1,5 @@
 package com.ibm.academia.apirest.command;
 
-import com.ibm.academia.apirest.entities.Aula;
-import com.ibm.academia.apirest.enums.Pizarron;
 import com.ibm.academia.apirest.services.AulaDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

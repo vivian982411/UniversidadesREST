@@ -1,8 +1,7 @@
 package com.ibm.academia.apirest.services;
 
-import com.ibm.academia.apirest.entities.Carrera;
-import com.ibm.academia.apirest.entities.Pabellon;
-import com.ibm.academia.apirest.repositories.CarreraRepository;
+import com.ibm.academia.apirest.models.entities.Pabellon;
+import com.ibm.academia.apirest.models.entities.Persona;
 import com.ibm.academia.apirest.repositories.PabellonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,5 +25,16 @@ public class PabellonDAOImpl extends GenericoDAOImpl<Pabellon, PabellonRepositor
     @Transactional(readOnly = true)
     public Iterable<Pabellon> findByNombre(String nombre) {
         return repository.findByNombre(nombre);
+    }
+
+    @Override
+    @Transactional
+    public Pabellon actualizar(Pabellon pabellonEncontrado, Pabellon pabellon) {
+        Pabellon pabellonActualizado = null;
+        pabellonEncontrado.setNombre(pabellonEncontrado.getNombre());
+        pabellonEncontrado.setDireccion(pabellon.getDireccion());
+        pabellonEncontrado.setMetrosCuadrados(pabellon.getMetrosCuadrados());
+        pabellonActualizado=repository.save(pabellonEncontrado);
+        return pabellon;
     }
 }

@@ -1,6 +1,6 @@
 package com.ibm.academia.apirest.repositories;
 
-import com.ibm.academia.apirest.entities.Aula;
+import com.ibm.academia.apirest.models.entities.Aula;
 import com.ibm.academia.apirest.enums.Pizarron;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

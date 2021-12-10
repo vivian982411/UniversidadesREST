@@ -1,18 +1,11 @@
 package com.ibm.academia.apirest.command;
 
-import com.ibm.academia.apirest.entities.Direccion;
-import com.ibm.academia.apirest.entities.Empleado;
-import com.ibm.academia.apirest.entities.Persona;
-import com.ibm.academia.apirest.enums.TipoEmpleado;
 import com.ibm.academia.apirest.repositories.EmpleadoRepository;
-import com.ibm.academia.apirest.services.EmpleadoDAO;
 import com.ibm.academia.apirest.services.PersonaDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
-import java.math.BigDecimal;
 
 @Component
 public class EmpleadoComandos implements CommandLineRunner {

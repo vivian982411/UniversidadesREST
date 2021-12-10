@@ -1,6 +1,6 @@
 package com.ibm.academia.apirest.repositories;
 
-import com.ibm.academia.apirest.entities.Pabellon;
+import com.ibm.academia.apirest.models.entities.Pabellon;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
