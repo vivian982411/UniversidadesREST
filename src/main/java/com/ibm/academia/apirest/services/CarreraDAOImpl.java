@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ibm.academia.apirest.entities.Carrera;
+import com.ibm.academia.apirest.models.entities.Carrera;
 import com.ibm.academia.apirest.repositories.CarreraRepository;
 
 @Service
@@ -37,5 +37,15 @@ public class CarreraDAOImpl extends GenericoDAOImpl<Carrera, CarreraRepository> 
 	@Transactional(readOnly = true)
 	public Iterable<Carrera> buscarCarrerasPorProfesorNombreYApellido(String nombre, String apellido) {
 		return repository.buscarCarrerasPorProfesorNombreYApellido(nombre,apellido);
+	}
+
+	@Override
+	@Transactional
+	public Carrera actualizar(Carrera carreraEncontrada, Carrera carreraActualizada) {
+		Carrera carrera = null;
+		carreraEncontrada.setCantidadAnios(carreraActualizada.getCantidadAnios());
+		carreraEncontrada.setCantidadMaterias(carreraActualizada.getCantidadMaterias());
+		carrera=repository.save(carreraEncontrada);
+		return carrera;
 	}
 }

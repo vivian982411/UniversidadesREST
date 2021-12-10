@@ -1,9 +1,8 @@
 package com.ibm.academia.apirest.services;
 
-import com.ibm.academia.apirest.entities.Aula;
+import com.ibm.academia.apirest.models.entities.*;
 import com.ibm.academia.apirest.enums.Pizarron;
 import com.ibm.academia.apirest.repositories.AulaRepository;
-import com.ibm.academia.apirest.repositories.CarreraRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -33,5 +32,24 @@ public class AulaDAOImpl  extends GenericoDAOImpl<Aula, AulaRepository> implemen
     @Transactional(readOnly = true)
     public Iterable<Aula> findByPabellonNombre(String nombre) {
         return repository.findByPabellonNombre(nombre);
+    }
+
+    @Override
+    @Transactional
+    public Aula actualizar(Aula aulaEncontrada, Aula aula) {
+        Aula aulaActualizada = null;
+        aulaEncontrada.setMedidas(aula.getMedidas());
+        aulaEncontrada.setCantidadPupitres(aula.getCantidadPupitres());
+        aulaEncontrada.setPizarron(aula.getPizarron());
+        aulaActualizada=repository.save(aulaEncontrada);
+        return aulaActualizada;
+    }
+
+    @Override
+    @Transactional
+    public Aula asociarPabellonAula(Pabellon pabellon, Aula aula) {
+        aula.setPabellon(pabellon);
+
+        return repository.save(aula);
     }
 }

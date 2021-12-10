@@ -2,7 +2,7 @@ package com.ibm.academia.apirest.services;
 
 import java.util.Optional;
 
-import com.ibm.academia.apirest.entities.Persona;
+import com.ibm.academia.apirest.models.entities.Persona;
 import com.ibm.academia.apirest.repositories.PersonaRepository;
 import org.springframework.transaction.annotation.Transactional;
 

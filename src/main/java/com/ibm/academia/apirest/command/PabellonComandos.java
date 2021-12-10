@@ -1,8 +1,5 @@
 package com.ibm.academia.apirest.command;
 
-import com.ibm.academia.apirest.entities.Direccion;
-import com.ibm.academia.apirest.entities.Pabellon;
-import com.ibm.academia.apirest.repositories.PabellonRepository;
 import com.ibm.academia.apirest.services.PabellonDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
